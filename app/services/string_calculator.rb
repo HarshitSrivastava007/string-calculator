@@ -1,6 +1,6 @@
 class StringCalculator
   def add(numbers)
     return 0 if numbers.empty?
-    return numbers.to_i if numbers.count(',') == 0
+    numbers.split(",").map(&:to_i).sum
   end
 end
